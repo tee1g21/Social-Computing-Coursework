@@ -43,12 +43,12 @@ if __name__ == '__main__':
 	logger.info( 'loading training set and creating sqlite3 database' )
 
 	# connect to database (using sqlite3 lib built into python)
-	conn = sqlite3.connect( 'D2/train_20M.db')
+	conn = sqlite3.connect( '../../data/dataset2/train_20M.db')
 
 	#
 	# comp3208-test-small.csv
 	#
-	readHandle = codecs.open( 'D2/train_20M_withratings.csv', 'r', 'utf-8', errors = 'replace' )
+	readHandle = codecs.open( '../../data/dataset2/train_20M_withratings.csv', 'r', 'utf-8', errors = 'replace' )
 	listLines = readHandle.readlines()
 	readHandle.close()
 

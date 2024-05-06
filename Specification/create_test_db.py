@@ -42,7 +42,7 @@ if __name__ == '__main__':
 
 	logger.info( 'loading training set and creating sqlite3 database' )
 
-	conn = sqlite3.connect('test_20M.db') 
+	conn = sqlite3.connect('../../data/dataset2/test_20M.db') 
 	c = conn.cursor()
 
 	# Create the table if it doesn't exist
@@ -61,7 +61,7 @@ if __name__ == '__main__':
 	conn.commit()
 
 	# Read the CSV file
-	with codecs.open('D2/test_20M_withoutratings.csv', 'r', 'utf-8', errors='replace') as file:
+	with codecs.open('../../data/dataset2/test_20M_withoutratings.csv', 'r', 'utf-8', errors='replace') as file:
 		lines = file.readlines()
 
 	# Insert data into the database
