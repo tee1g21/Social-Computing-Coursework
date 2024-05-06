@@ -264,7 +264,7 @@ if __name__ == '__main__':
     num_factors = 60  # Latent factors
     alpha = 0.0075      # Learning rate
     beta = 0.03      # Regularization
-    iterations = 2   # Number of iterations
+    iterations = 10   # Number of iterations
 
     # perform SGD on all data, returning user and item factors
     sgd_user_factors, sgd_item_factors = sgd(all_data[0], all_data[1], all_data[2], global_num_users, global_num_items, num_factors, alpha, beta, iterations)

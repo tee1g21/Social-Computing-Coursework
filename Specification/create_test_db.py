@@ -65,7 +65,7 @@ if __name__ == '__main__':
 		lines = file.readlines()
 
 	# Insert data into the database
-	for line in lines[1:]:  # Skip header row if your CSV has one
+	for line in lines:  # Skip header row if your CSV has one
 		parts = line.strip().split(',')
 		if len(parts) == 3:  # Ensure there are only three elements (UserID, ItemID, TimeStamp)
 			user_id, item_id, timestamp = map(int, parts)  # Convert strings to integers
